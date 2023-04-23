@@ -1,0 +1,327 @@
+/*============MOBILE CONFIGURATION=============*/
+/*============RESET============*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.desktop-page {
+  display: none;
+}
+/*============ROOT=============*/
+:root {
+  font-size: 6.25%;
+}
+/*============BODY=============*/
+body {
+  font-family: 'Staatliches', cursive;
+  background: #E5E5E5;
+}
+/*============PAGE=============*/
+.mobile-page {
+  position: relative;
+
+  width: 384rem;
+  height: 100%;
+  
+  margin: auto;
+  padding-bottom: 60rem;
+
+  background: #EFF1FF;
+}
+/*===========HEADER============*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: 279rem;
+  background: #8E9AAF;
+}
+
+.logo1 {
+  margin: 32rem auto;
+  width: 137rem;
+  height: 137rem;
+  opacity: 1;
+
+  animation: logo-rotate 1.25s 200ms ease backwards;
+}
+
+h1 {  
+  height: 49rem;
+  background: #CBC0D3;
+
+  font-size: 40rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34rem;
+
+  letter-spacing: 0.05em;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+/*============MAIN=============*/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-family: 'Palanquin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20rem;
+  line-height: 20rem;
+
+  color: #23053A;
+  text-align: justify;
+
+  width: 90%;
+  
+  margin: 14rem auto 63rem;
+}
+/*============CARDS============*/
+.card {
+  position: relative;
+
+  animation: downtop 1s 200ms ease backwards;
+}
+
+.card img {
+  width: 320rem;
+  object-fit: cover;
+  border-radius: 8px;
+
+  transition: 200ms;
+}
+
+.card h2 {
+  position: absolute;
+  top: 16rem;
+  right: 16rem;
+  background: #FEEAFA;
+  border-radius: 20rem;
+
+  width: 112rem;
+  height: 35rem;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20rem;
+  line-height: 34rem;
+
+  letter-spacing: 0.05em;
+
+  color: #4A4E69;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: scale 1.5s 250ms ease backwards;
+  opacity: 0.75;
+}
+
+main > div > div:nth-child(1) {
+  margin-bottom: 32rem;
+}
+
+main > div > div:nth-child(3) {
+  margin: 36rem auto;
+}
+
+.card img:hover {
+  transition: 250ms;
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/*============DESKTOP CONFIGURATION============*/
+@media (min-width: 1280px) {
+  /*============RESET===========*/
+  .mobile-page {
+    display: none;
+  }
+
+  .desktop-page {
+    display: initial;
+  }
+  
+  main > div > div:nth-child(1),
+  main > div > div:nth-child(3) {
+    margin: 0;
+  }
+  /*============PAGE============*/
+  .desktop-page {
+    position: relative;
+    
+    width: 1280rem;
+    height: 720rem;
+  
+    display: flex;
+    gap: 98rem;
+
+    margin: auto;
+  
+    background: #EFF1FF;
+  }
+  /*============HEADER===========*/
+  header {
+    width: 377rem;
+    height: 720rem;
+  }
+
+  header p {
+    width: 275rem;
+    height: 262rem;
+
+    margin: 32px 51rem 125rem;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24rem;
+    line-height: 20rem;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+  /*============MAIN============*/
+  
+  main > div > div:nth-child(1) > img,
+  main > div > div:nth-child(3) > img,
+  main > div > div:nth-child(5) > img {
+    width: 220rem;
+    height: 150rem;
+
+    border-radius: 20px;
+  }
+
+  main > div > div:nth-child(2) > img,
+  main > div > div:nth-child(4) > img,
+  main > div > div:nth-child(6) > img {
+    width: 220rem;
+    height: 350rem;
+
+    border-radius: 20px;
+  }
+  /*============CARD============*/
+  .cards {
+    display: grid;
+    grid-template-areas:
+      'A B E'
+      'D B F'
+      'D C F';
+    gap: 32rem;
+    padding: 64rem 81rem 124rem 0rem;
+  }
+
+  main > div > div:nth-child(1) {
+    grid-area: A;
+  }
+
+  main > div > div:nth-child(2) {
+    grid-area: B;
+  }
+
+  main > div > div:nth-child(3) {
+    grid-area: C;
+  }
+
+  main > div > div:nth-child(4) {
+    grid-area: D;
+  }
+
+  main > div > div:nth-child(5) {
+    grid-area: E;
+  }
+
+  main > div > div:nth-child(6) {
+    grid-area: F;
+  }
+
+  .card h2 {
+    top: 7rem;
+    right: 7rem;
+  
+    width: 80rem;
+
+    font-size: 15rem;
+  }  
+  /*============FOOTER============*/
+  footer {
+    display: initial;
+  
+    width: 592rem;
+    height: 28rem;
+  
+    position: absolute;
+    right: 12%;
+    bottom: 46rem;
+  
+  
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14rem;
+    line-height: 28rem;
+    
+    text-align: center;
+    
+    color: #4A4E69;
+
+    animation: downtop 1.25s 210ms ease backwards;
+  }
+  
+  footer span {
+    font-weight: bold;
+  } 
+}
+
+/*============KEYFRAMES CONFIGURATION============*/
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+    
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+    
+  100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+}
+
+@keyframes logo-rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+    
+  100% {
+    transform: rotateY(360deg);
+  } 
+}
